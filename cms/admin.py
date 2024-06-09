@@ -6,8 +6,8 @@ class CmsAdmin(admin.ModelAdmin):
     list_display = ('cms_title', 'cms_text', 'cms_css', 'get_img')
     list_display_links = ('cms_title',)
     list_editable = ('cms_css',)
+    fields  = ('cms_title', 'cms_text', 'cms_css', 'cms_img' 'get_img')
     readonly_fields = ('get_img',)
-    fields  = ('cms_title', 'cms_text', 'cms_css', 'get_img')
 
     
     def get_img(self, obj):
