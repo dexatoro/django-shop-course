@@ -12,7 +12,9 @@ def sendTelegram(tg_name, tg_phone):
         text = str(settings.tg_message)
         api = 'https://api.telegram.org/bot'
         method = api + token + '/sendMessage'
-
+        # Сообщение с сайта
+        # Имя: {}
+        # Телефон: {}
         if text.find('{') and text.find('}') and text.rfind('{') and text.rfind('}'):
             part_1 = text[0:text.find('{')]
             part_2 = text[text.find('}')+1:text.rfind('{')]
